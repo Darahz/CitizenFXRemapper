@@ -5,6 +5,7 @@ Reload game to load new config
 
 <h1>Look at it!</h1>
 <img src="https://user-images.githubusercontent.com/35222814/157640120-3b36e270-122a-411f-a66e-ba060b8c1d2a.png" height="400px">
+<img src="https://user-images.githubusercontent.com/35222814/157643305-2cbae41e-f1c9-4045-8e75-66886ba6d806.png" height="200px">
 
 <img src="https://user-images.githubusercontent.com/35222814/157640610-e7536fd8-d0a4-41a0-b6ca-5ecaaae838b8.png" height="400px">
 
