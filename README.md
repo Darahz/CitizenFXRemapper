@@ -4,4 +4,4 @@ Made to make it easier to do your keybinds **outside** of GTAV.</br>
  - Easily add new bindings
    - Color visualizer
 
-![1V4DHhTmfQ](https://user-images.githubusercontent.com/35222814/157724788-3238a2b3-5162-45aa-ab97-590d11b8e885.gif)
+![UeCQSey7Uw](https://user-images.githubusercontent.com/35222814/157725252-7742da21-b5db-4f15-b0ee-ba252bf569da.gif)
