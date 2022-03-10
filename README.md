@@ -1,11 +1,7 @@
-# CitizenFXRemapper
-<img src="https://github.com/Darahz/CitizenFXRemapper/blob/master/CitizenFXRemapper/keyboardImage.png?raw=true" height="64px">
-Made to make it easier to do your keybinds <b>outside</b> of GTAV.</br>
+<img src="https://user-images.githubusercontent.com/35222814/157722022-c7cc57e9-d525-405d-8d9e-ae1d478e9017.png" height="128px"/><br></br>
+Made to make it easier to do your keybinds **outside** of GTAV.</br>
  - Reload game to load new config
+ - Easily add new bindings
+   - Color visualizer
 
-<h1>Look at it!</h1>
-<img src="https://user-images.githubusercontent.com/35222814/157640120-3b36e270-122a-411f-a66e-ba060b8c1d2a.png" height="400px">
-<img src="https://user-images.githubusercontent.com/35222814/157643305-2cbae41e-f1c9-4045-8e75-66886ba6d806.png" height="200px">
-
-<img src="https://user-images.githubusercontent.com/35222814/157640610-e7536fd8-d0a4-41a0-b6ca-5ecaaae838b8.png" height="400px">
-
+![1V4DHhTmfQ](https://user-images.githubusercontent.com/35222814/157724788-3238a2b3-5162-45aa-ab97-590d11b8e885.gif)
