@@ -1,6 +1,7 @@
-<img src="https://user-images.githubusercontent.com/35222814/157722022-c7cc57e9-d525-405d-8d9e-ae1d478e9017.png" height="128px"/><br>
+<img src="https://user-images.githubusercontent.com/35222814/157726639-da9f5e23-32e6-4f27-b21e-143450ba409b.png" height="128px"/>
+
 ## Make it easier to add/edit your FiveM keybindings!
-- Easily add new bindings
+- Add new bindings (item????)
 
  ![image](https://user-images.githubusercontent.com/35222814/157725907-ff16bfbb-e17e-4bd7-98fa-fa73a6d034b4.png)
  
