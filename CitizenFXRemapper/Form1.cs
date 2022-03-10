@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CitizenFXRemapper
@@ -24,7 +22,6 @@ namespace CitizenFXRemapper
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private List<Userbind> keybinds = new List<Userbind>();
         public List<string> FullConfig = new List<string>();
         public List<string> Userbinds = new List<string>();
         public List<string> FullWithoutBinds = new List<string>();
@@ -37,6 +34,13 @@ namespace CitizenFXRemapper
             this.Load += (o, e) =>
             {
                 LoadConfig(string.Empty);
+
+                string[] Files = Directory.GetFiles(".", "*.cfg");
+                foreach (var file in Files)
+                {
+                    
+                }
+
             };
 
             button1.Click += (s, e) => {
@@ -64,7 +68,6 @@ namespace CitizenFXRemapper
                 sb.Append($"{item}{Environment.NewLine}");
             }
 
-            keybinds.Clear();
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 sb.Append($"{listView1.Items[i].SubItems[0].Text} {listView1.Items[i].SubItems[1].Text} {listView1.Items[i].SubItems[2].Text} {listView1.Items[i].SubItems[3].Text}{Environment.NewLine}");
@@ -99,7 +102,6 @@ namespace CitizenFXRemapper
                 string inputMethod = raw[1];
                 string key = raw[2];
                 string result = string.Join(" ", raw.Skip(3));
-                keybinds.Add(new Userbind(action, inputMethod, key, result));
 
                 ListViewItem lwi = new ListViewItem();
                 lwi.Text = action;
@@ -287,8 +289,6 @@ namespace CitizenFXRemapper
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            //if (listView1.SelectedItems.Count == 0) contextMenuStrip1.Items[4].Enabled = false;
-            //if (listView1.SelectedItems.Count == 0) contextMenuStrip1.Items[5].Enabled = false;
             contextMenuStrip1.Items[5].Enabled = listView1.SelectedItems.Count != 0;
             contextMenuStrip1.Items[6].Enabled = listView1.SelectedItems.Count != 0;
         }
@@ -344,6 +344,12 @@ namespace CitizenFXRemapper
             }
         }
 
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SaveFile($"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\CitizenFX\\fivem.cfg",RichTextBoxStreamType.PlainText);
+            MessageBox.Show("Config saved");
+        }
+
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -353,14 +359,19 @@ namespace CitizenFXRemapper
             }
         }
 
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextBox1.SaveFile($"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\CitizenFX\\fivem.cfg",RichTextBoxStreamType.PlainText);
+            panel3.Visible = tabControl1.SelectedIndex == 0;
         }
     }
 }
