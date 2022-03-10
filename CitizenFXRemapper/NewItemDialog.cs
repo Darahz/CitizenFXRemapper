@@ -64,50 +64,44 @@ namespace CitizenFXRemapper
 
                     string total = $"{before}{next}{After}";
 
-                    if (total == "~r~")
+                    switch (total)
                     {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Red;
-                    }
-                    else if (total == "~g~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Green;
-                    }
-                    else if (total == "~b~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Blue;
-                    }
-                    else if (total == "~y~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Gold;
-                    }
-                    else if (total == "~p~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Purple;
-                    }
-                    else if (total == "~c~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Gray;
-                    }
-                    else if (total == "~u~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Black;
-                    }
-                    else if (total == "~o~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.Orange;
-                    }
-                    else if (total == "~w~")
-                    {
-                        richTextBox1.Select(i, richTextBox1.TextLength);
-                        richTextBox1.SelectionColor = Color.White;
+                        case "~r~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Red;
+                            break;
+                        case "~g~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Green;
+                            break;
+                        case "~b~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Blue;
+                            break;
+                        case "~y~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Gold;
+                            break;
+                        case "~p~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Purple;
+                            break;
+                        case "~c~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Gray;
+                            break;
+                        case "~u~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Black;
+                            break;
+                        case "~o~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.Orange;
+                            break;
+                        case "~w~":
+                            richTextBox1.Select(i, richTextBox1.TextLength);
+                            richTextBox1.SelectionColor = Color.White;
+                            break;
                     }
                 }
             }

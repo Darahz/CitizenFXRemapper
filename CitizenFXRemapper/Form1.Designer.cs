@@ -55,11 +55,14 @@ namespace CitizenFXRemapper
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -79,7 +82,7 @@ namespace CitizenFXRemapper
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1268, 665);
+            this.listView1.Size = new System.Drawing.Size(1268, 655);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -241,14 +244,15 @@ namespace CitizenFXRemapper
             this.tabControl1.Size = new System.Drawing.Size(1282, 699);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 8;
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.listView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1274, 671);
+            this.tabPage1.Size = new System.Drawing.Size(1274, 661);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Bindings";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -277,12 +281,36 @@ namespace CitizenFXRemapper
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Location = new System.Drawing.Point(304, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(989, 33);
+            this.panel1.TabIndex = 9;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(943, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(46, 33);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "x";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1282, 752);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -297,6 +325,7 @@ namespace CitizenFXRemapper
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,6 +356,8 @@ namespace CitizenFXRemapper
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

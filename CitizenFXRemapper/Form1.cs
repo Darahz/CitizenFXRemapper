@@ -16,7 +16,13 @@ namespace CitizenFXRemapper
     public partial class Form1 : Form
     {
 
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
 
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         private List<Userbind> keybinds = new List<Userbind>();
         public List<string> FullConfig = new List<string>();
@@ -43,7 +49,7 @@ namespace CitizenFXRemapper
             {
                 SaveConfig(string.Empty);
             };
-            
+                       
         }
 
         private void SaveConfig(string filename)
@@ -84,10 +90,49 @@ namespace CitizenFXRemapper
             FullConfig = File.ReadAllLines(filename).ToList();
             Userbinds = FullConfig.Where(x => x.StartsWith("bind")).ToList();
             FullWithoutBinds = FullConfig.Except(Userbinds).ToList();
+            ColorRichtextbox(filename);
 
-            richTextBox1.Text = File.ReadAllText(filename);
-            for (int i = 2; i < richTextBox1.Lines.Length; i++)
+            for (int i = 0; i < Userbinds.Count; i++)
             {
+                string[] raw = Userbinds[i].Split(' ');
+                string action = raw[0];
+                string inputMethod = raw[1];
+                string key = raw[2];
+                string result = string.Join(" ", raw.Skip(3));
+                keybinds.Add(new Userbind(action, inputMethod, key, result));
+
+                ListViewItem lwi = new ListViewItem();
+                lwi.Text = action;
+                lwi.SubItems.Add(inputMethod);
+                lwi.SubItems.Add(key);
+                lwi.SubItems.Add(result);
+                listView1.Items.Add(lwi);
+
+            }
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        private void ColorRichtextbox(string filename)
+        {
+            if(filename != string.Empty)
+            {
+                string[] FileContent = File.ReadAllText(filename).Split('\n').ToArray();
+                string[] FirstItems = FileContent.Take(2).ToArray();
+
+                richTextBox1.Text += string.Join("", FirstItems);
+                richTextBox1.Text += string.Join("", FileContent.Skip(2).OrderBy(x => x));
+            }
+
+            for (int i = 0; i < richTextBox1.Lines.Length; i++)
+            {
+
+                if (richTextBox1.Lines[i].StartsWith("//"))
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i), richTextBox1.Lines[i].Length);
+                    richTextBox1.SelectionColor = Color.Green;
+                }
+
+                if (i < 2) continue;
 
                 Match chrpos = Regex.Match(richTextBox1.Lines[i], "bind");
                 if (chrpos.Success)
@@ -96,10 +141,10 @@ namespace CitizenFXRemapper
                     richTextBox1.SelectionColor = Color.GreenYellow;
                 }
 
-                 chrpos = Regex.Match(richTextBox1.Lines[i], "\"[^\"]*\"");
+                chrpos = Regex.Match(richTextBox1.Lines[i], "\"[^\"]*\"");
                 if (chrpos.Success)
                 {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index + 1,(chrpos.Length-2));
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index + 1, (chrpos.Length - 2));
                     richTextBox1.SelectionColor = Color.LightSeaGreen;
                 }
 
@@ -139,25 +184,6 @@ namespace CitizenFXRemapper
                 }
 
             }
-
-            for (int i = 0; i < Userbinds.Count; i++)
-            {
-                string[] raw = Userbinds[i].Split(' ');
-                string action = raw[0];
-                string inputMethod = raw[1];
-                string key = raw[2];
-                string result = string.Join(" ", raw.Skip(3));
-                keybinds.Add(new Userbind(action, inputMethod, key, result));
-
-                ListViewItem lwi = new ListViewItem();
-                lwi.Text = action;
-                lwi.SubItems.Add(inputMethod);
-                lwi.SubItems.Add(key);
-                lwi.SubItems.Add(result);
-                listView1.Items.Add(lwi);
-
-            }
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void addItemBelowToolStripMenuItem_Click(object sender, EventArgs e)
@@ -298,6 +324,24 @@ namespace CitizenFXRemapper
             if (MessageBox.Show("Are you sure you want to start over?", "Uh oh!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 listView1.Items.Clear();
+            }
+        }
+
+        private void tabControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
 
