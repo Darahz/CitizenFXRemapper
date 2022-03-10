@@ -135,6 +135,7 @@ namespace CitizenFXRemapper
                 if (i < 2) continue;
 
                 Match chrpos = Regex.Match(richTextBox1.Lines[i], "bind");
+
                 if (chrpos.Success)
                 {
                     richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
@@ -177,6 +178,13 @@ namespace CitizenFXRemapper
                 }
 
                 chrpos = Regex.Match(richTextBox1.Lines[i], "\\s\\d\\s");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.Yellow;
+                }
+
+                chrpos = Regex.Match(richTextBox1.Lines[i], "\\s[Ff][0-9]+\\s");
                 if (chrpos.Success)
                 {
                     richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
