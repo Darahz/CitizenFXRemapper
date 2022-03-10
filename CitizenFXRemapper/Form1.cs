@@ -7,6 +7,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -83,6 +84,61 @@ namespace CitizenFXRemapper
             FullConfig = File.ReadAllLines(filename).ToList();
             Userbinds = FullConfig.Where(x => x.StartsWith("bind")).ToList();
             FullWithoutBinds = FullConfig.Except(Userbinds).ToList();
+
+            richTextBox1.Text = File.ReadAllText(filename);
+            for (int i = 2; i < richTextBox1.Lines.Length; i++)
+            {
+
+                Match chrpos = Regex.Match(richTextBox1.Lines[i], "bind");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.GreenYellow;
+                }
+
+                 chrpos = Regex.Match(richTextBox1.Lines[i], "\"[^\"]*\"");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index + 1,(chrpos.Length-2));
+                    richTextBox1.SelectionColor = Color.LightSeaGreen;
+                }
+
+                chrpos = Regex.Match(richTextBox1.Lines[i], "rbind");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.Salmon;
+                }
+
+                chrpos = Regex.Match(richTextBox1.Lines[i], "seta");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.Violet;
+                }
+
+                chrpos = Regex.Match(richTextBox1.Lines[i], "true");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.LightGreen;
+                }
+
+                chrpos = Regex.Match(richTextBox1.Lines[i], "false");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.Salmon;
+                }
+
+                chrpos = Regex.Match(richTextBox1.Lines[i], "\\s\\d\\s");
+                if (chrpos.Success)
+                {
+                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
+                    richTextBox1.SelectionColor = Color.Yellow;
+                }
+
+            }
 
             for (int i = 0; i < Userbinds.Count; i++)
             {
@@ -214,20 +270,11 @@ namespace CitizenFXRemapper
             {
                 SaveConfig(sfd.FileName);
             }
-            comboBox1.Items.Clear();
-            foreach (string file in Directory.GetFiles(".\\", "*.cfg", SearchOption.TopDirectoryOnly))
-            {
-                comboBox1.Items.Add(file);
-            }
-            comboBox1.SelectedIndex = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (string file in Directory.GetFiles(".\\", "*.cfg", SearchOption.TopDirectoryOnly))
-            {
-                comboBox1.Items.Add(file);
-            }
+            
         }
 
         private void restoreFromBackupToolStripMenuItem_Click(object sender, EventArgs e)
@@ -254,15 +301,5 @@ namespace CitizenFXRemapper
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            LoadConfig(comboBox1.Text);
-            comboBox1.Items.Clear();
-            foreach (string file in Directory.GetFiles(".\\", "*.cfg", SearchOption.TopDirectoryOnly))
-            {
-                comboBox1.Items.Add(file);
-            }
-            comboBox1.SelectedIndex = 0;
-        }
     }
 }
