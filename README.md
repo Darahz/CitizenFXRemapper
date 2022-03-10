@@ -1,6 +1,6 @@
 # CitizenFXRemapper
 <img src="https://github.com/Darahz/CitizenFXRemapper/blob/master/CitizenFXRemapper/keyboardImage.png?raw=true" height="64px">
-Made to make it easier to do your binds **outside** of GTAV.
+Made to make it easier to do your binds <b style="color:red;">outside</b> of GTAV.</br>
 Reload game to load new config
 
 <h1>Look at it!</h1>
