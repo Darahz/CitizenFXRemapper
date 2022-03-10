@@ -1,2 +1,2 @@
 # CitizenFXRemapper
-![alt text](https://raw.githubusercontent.com/Darahz/CitizenFXRemapper/master/CitizenFXRemapper/keyboard.ico)
+![alt text](https://github.com/Darahz/CitizenFXRemapper/blob/master/CitizenFXRemapper/keyboardImage.png?raw=true)
