@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CitizenFXRemapper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Darahz")]
 [assembly: AssemblyProduct("CitizenFXRemapper")]
 [assembly: AssemblyCopyright("Copyright Darahz©  2022")]
 [assembly: AssemblyTrademark("Darahz")]

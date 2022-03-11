@@ -116,84 +116,7 @@ namespace CitizenFXRemapper
 
         private void ColorRichtextbox(string filename)
         {
-            if(filename != string.Empty)
-            {
-                string[] FileContent = File.ReadAllText(filename).Split('\n').ToArray();
-                string[] FirstItems = FileContent.Take(2).ToArray();
-
-                richTextBox1.Text += string.Join("", FirstItems);
-                richTextBox1.Text += string.Join("", FileContent.Skip(2).OrderBy(x => x));
-            }
-
-            for (int i = 0; i < richTextBox1.Lines.Length; i++)
-            {
-
-                if (richTextBox1.Lines[i].StartsWith("//"))
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i), richTextBox1.Lines[i].Length);
-                    richTextBox1.SelectionColor = Color.Green;
-                }
-
-                if (i < 2) continue;
-
-                Match chrpos = Regex.Match(richTextBox1.Lines[i], "bind");
-
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.GreenYellow;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "\"[^\"]*\"");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index + 1, (chrpos.Length - 2));
-                    richTextBox1.SelectionColor = Color.LightSeaGreen;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "rbind");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.Salmon;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "seta");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.Violet;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "true");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.LightGreen;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "false");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.Salmon;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "\\s\\d\\s");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.Yellow;
-                }
-
-                chrpos = Regex.Match(richTextBox1.Lines[i], "\\s[Ff][0-9]+\\s");
-                if (chrpos.Success)
-                {
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(i) + chrpos.Index, chrpos.Length);
-                    richTextBox1.SelectionColor = Color.Yellow;
-                }
-
-            }
+            
         }
 
         private void addItemBelowToolStripMenuItem_Click(object sender, EventArgs e)
@@ -372,6 +295,12 @@ namespace CitizenFXRemapper
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             panel3.Visible = tabControl1.SelectedIndex == 0;
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
     }
 }
