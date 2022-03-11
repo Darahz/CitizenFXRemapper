@@ -52,6 +52,15 @@ namespace CitizenFXRemapper
                 {
                     keylist.Items.Add(keyname.ToString());
                 }
+
+                for (int i = 0; i < keylist.Items.Count; i++)
+                {
+                    string value = keylist.GetItemText(keylist.Items[i]);
+                    if (Regex.Match(value, "D[0-9]").Success)
+                    {
+                        keylist.Items[keylist.FindStringExact(value)] = value.Replace("D", string.Empty);
+                    }
+                }
             };
 
             ActionTextbox.TextChanged += (s, e) =>
@@ -76,6 +85,16 @@ namespace CitizenFXRemapper
                 KeybindBox.Visible = KeybindList.SelectedItems.Count != 0;
                 KeybindBox.BringToFront();
                 BottomToolStrip.Visible = KeybindList.SelectedItems.Count == 0;
+                if (KeybindList.SelectedItems.Count == 0)
+                {
+                    keylist.Text = string.Empty;
+                    ActionTextbox.Text = string.Empty;
+                    return;
+                };
+                
+                keylist.SelectedIndex = keylist.FindString(KeybindList.SelectedItems[0].SubItems[2].Text);
+                
+                ActionTextbox.Text = KeybindList.SelectedItems[0].SubItems[3].Text;
             };
 
         }
@@ -91,7 +110,6 @@ namespace CitizenFXRemapper
                     case "~r~":
                         PreviewRichtextbox.Select(match.Index, PreviewRichtextbox.TextLength);
                         PreviewRichtextbox.SelectionColor = Color.Red;
-
                         break;
                     case "~g~":
                         PreviewRichtextbox.Select(match.Index, PreviewRichtextbox.TextLength);
@@ -134,6 +152,69 @@ namespace CitizenFXRemapper
                 
             }
 
+        }
+
+        private void InsertColorREDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~r~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorBLUEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~b~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorGREENToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~g~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorYELLOWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~y~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorPURPULEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~p~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorORANGEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~o~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorGREYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~c~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertColorWHITEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~w~");
+            ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void insertStyleBOLDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selection = ActionTextbox.SelectionStart;
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~h~");
+            ActionTextbox.SelectionStart = selection + 3;
         }
     }
 }

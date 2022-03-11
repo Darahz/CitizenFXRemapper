@@ -39,7 +39,27 @@ namespace CitizenFXRemapper
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.KeybindListContextmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.addItemAboneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemBelowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KeybindBox = new System.Windows.Forms.GroupBox();
+            this.sharedemoteslist = new System.Windows.Forms.ComboBox();
+            this.walkstylelist = new System.Windows.Forms.ComboBox();
+            this.emoteslist = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +67,17 @@ namespace CitizenFXRemapper
             this.PreviewRichtextbox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ActionTextbox = new System.Windows.Forms.TextBox();
+            this.InsertColorCodes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.insertColorREDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorBLUEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorGREENToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorYELLOWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorPURPULEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorORANGEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorGREYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.insertColorWHITEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertStyleBOLDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.keylist = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -62,27 +93,18 @@ namespace CitizenFXRemapper
             this.BottomToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.LoadedConfig = new System.Windows.Forms.ToolStripComboBox();
-            this.KeybindListContextmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.addItemAboneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemBelowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.editItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel.SuspendLayout();
             this.customTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.KeybindListContextmenu.SuspendLayout();
             this.KeybindBox.SuspendLayout();
+            this.InsertColorCodes.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.FormHeader.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
             this.BottomToolStrip.SuspendLayout();
-            this.KeybindListContextmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -162,8 +184,85 @@ namespace CitizenFXRemapper
             // 
             this.columnHeader4.Text = "Action";
             // 
+            // KeybindListContextmenu
+            // 
+            this.KeybindListContextmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addItemToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.addItemAboneToolStripMenuItem,
+            this.addItemBelowToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.editItemToolStripMenuItem,
+            this.removeToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.clearAllToolStripMenuItem});
+            this.KeybindListContextmenu.Name = "contextMenuStrip1";
+            this.KeybindListContextmenu.Size = new System.Drawing.Size(181, 154);
+            // 
+            // addItemToolStripMenuItem
+            // 
+            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemToolStripMenuItem.Text = "Add Keybind";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // addItemAboneToolStripMenuItem
+            // 
+            this.addItemAboneToolStripMenuItem.Name = "addItemAboneToolStripMenuItem";
+            this.addItemAboneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemAboneToolStripMenuItem.Text = "Add Keybind abowe";
+            // 
+            // addItemBelowToolStripMenuItem
+            // 
+            this.addItemBelowToolStripMenuItem.Name = "addItemBelowToolStripMenuItem";
+            this.addItemBelowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemBelowToolStripMenuItem.Text = "Add Keybind below";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // editItemToolStripMenuItem
+            // 
+            this.editItemToolStripMenuItem.Name = "editItemToolStripMenuItem";
+            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editItemToolStripMenuItem.Text = "Edit keybind";
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeToolStripMenuItem.Text = "Remove Keybind";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // clearAllToolStripMenuItem
+            // 
+            this.clearAllToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
+            this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearAllToolStripMenuItem.Text = "Remove All";
+            // 
             // KeybindBox
             // 
+            this.KeybindBox.Controls.Add(this.sharedemoteslist);
+            this.KeybindBox.Controls.Add(this.walkstylelist);
+            this.KeybindBox.Controls.Add(this.emoteslist);
+            this.KeybindBox.Controls.Add(this.label7);
+            this.KeybindBox.Controls.Add(this.label8);
+            this.KeybindBox.Controls.Add(this.label9);
+            this.KeybindBox.Controls.Add(this.label10);
+            this.KeybindBox.Controls.Add(this.label11);
+            this.KeybindBox.Controls.Add(this.label12);
+            this.KeybindBox.Controls.Add(this.panel1);
             this.KeybindBox.Controls.Add(this.label6);
             this.KeybindBox.Controls.Add(this.label5);
             this.KeybindBox.Controls.Add(this.label4);
@@ -182,6 +281,584 @@ namespace CitizenFXRemapper
             this.KeybindBox.TabIndex = 0;
             this.KeybindBox.TabStop = false;
             this.KeybindBox.Visible = false;
+            // 
+            // sharedemoteslist
+            // 
+            this.sharedemoteslist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(193)))), ((int)(((byte)(194)))));
+            this.sharedemoteslist.FormattingEnabled = true;
+            this.sharedemoteslist.Items.AddRange(new object[] {
+            "handshake",
+            "handshake2",
+            "hug",
+            "hug2",
+            "bro",
+            "bro2",
+            "give",
+            "give2",
+            "baseball",
+            "baseballthrow",
+            "stickup",
+            "stickupscared",
+            "punch",
+            "punched",
+            "headbutt",
+            "headbutted",
+            "slap2",
+            "slap",
+            "slapped",
+            "slapped2"});
+            this.sharedemoteslist.Location = new System.Drawing.Point(985, 84);
+            this.sharedemoteslist.Name = "sharedemoteslist";
+            this.sharedemoteslist.Size = new System.Drawing.Size(427, 28);
+            this.sharedemoteslist.TabIndex = 29;
+            // 
+            // walkstylelist
+            // 
+            this.walkstylelist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(193)))), ((int)(((byte)(194)))));
+            this.walkstylelist.FormattingEnabled = true;
+            this.walkstylelist.Items.AddRange(new object[] {
+            "Alien",
+            "Armored",
+            "Arrogant",
+            "Brave",
+            "Casual",
+            "Casual2",
+            "Casual3",
+            "Casual4",
+            "Casual5",
+            "Casual6",
+            "Chichi",
+            "Confident",
+            "Cop",
+            "Cop2",
+            "Cop3",
+            "Default Female",
+            "Default Male",
+            "Drunk",
+            "Drunk",
+            "Drunk2",
+            "Drunk3",
+            "Femme",
+            "Fire",
+            "Fire2",
+            "Fire3",
+            "Flee",
+            "Franklin",
+            "Gangster",
+            "Gangster2",
+            "Gangster3",
+            "Gangster4",
+            "Gangster5",
+            "Grooving",
+            "Guard",
+            "Handcuffs",
+            "Heels",
+            "Heels2",
+            "Hiking",
+            "Hipster",
+            "Hobo",
+            "Hurry",
+            "Janitor",
+            "Janitor2",
+            "Jog",
+            "Lemar",
+            "Lester",
+            "Lester2",
+            "Maneater",
+            "Michael",
+            "Money",
+            "Muscle",
+            "Posh",
+            "Posh2",
+            "Quick",
+            "Runner",
+            "Sad",
+            "Sassy",
+            "Sassy2",
+            "Scared",
+            "Sexy",
+            "Shady",
+            "Slow",
+            "Swagger",
+            "Tough",
+            "Tough2",
+            "Trash",
+            "Trash2",
+            "Trevor",
+            "Wide"});
+            this.walkstylelist.Location = new System.Drawing.Point(985, 52);
+            this.walkstylelist.Name = "walkstylelist";
+            this.walkstylelist.Size = new System.Drawing.Size(427, 28);
+            this.walkstylelist.TabIndex = 28;
+            // 
+            // emoteslist
+            // 
+            this.emoteslist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(193)))), ((int)(((byte)(194)))));
+            this.emoteslist.FormattingEnabled = true;
+            this.emoteslist.Items.AddRange(new object[] {
+            "adjust",
+            "airguitar",
+            "airplane",
+            "airsynth",
+            "argue",
+            "argue2",
+            "atm",
+            "backpack",
+            "bark",
+            "bartender",
+            "bbq",
+            "beast",
+            "beer",
+            "beg",
+            "bird",
+            "blowkiss",
+            "blowkiss2",
+            "boi",
+            "bong",
+            "book",
+            "bouquet",
+            "bow",
+            "bow2",
+            "box",
+            "boxing",
+            "boxing2",
+            "bringiton",
+            "bumbin",
+            "bumsleep",
+            "burger",
+            "camera",
+            "celebrate",
+            "champagne",
+            "cheer",
+            "chicken",
+            "chill",
+            "chinup",
+            "cigar",
+            "cigar2",
+            "clap",
+            "clapangry",
+            "clipboard",
+            "clipboard2",
+            "cloudgaze",
+            "cloudgaze2",
+            "clown",
+            "clown2",
+            "clown3",
+            "clown4",
+            "clown5",
+            "coffee",
+            "comeatmebro",
+            "cop",
+            "cop2",
+            "cop3",
+            "copbeacon",
+            "cough",
+            "countdown",
+            "cpr",
+            "cpr2",
+            "crawl",
+            "crossarms",
+            "crossarms2",
+            "crossarms3",
+            "crossarms4",
+            "crossarms5",
+            "crossarms6",
+            "crossarmsside",
+            "cup",
+            "curtsy",
+            "cutthroat",
+            "cutthroat2",
+            "damn",
+            "damn2",
+            "dance",
+            "dance2",
+            "dance3",
+            "dance4",
+            "dance5",
+            "dance6",
+            "dance7",
+            "dance8",
+            "dance9",
+            "dancef",
+            "dancef2",
+            "dancef3",
+            "dancef4",
+            "dancef5",
+            "dancef6",
+            "danceshy",
+            "danceshy2",
+            "dancesilly",
+            "dancesilly2",
+            "dancesilly3",
+            "dancesilly4",
+            "dancesilly5",
+            "dancesilly6",
+            "dancesilly7",
+            "dancesilly8",
+            "dancesilly9",
+            "danceslow",
+            "danceslow2",
+            "danceslow3",
+            "danceslow4",
+            "danceupper",
+            "danceupper2",
+            "dj",
+            "donut",
+            "drink",
+            "eat",
+            "egobar",
+            "facepalm",
+            "facepalm2",
+            "facepalm3",
+            "facepalm4",
+            "fallasleep",
+            "fallover",
+            "fallover2",
+            "fallover3",
+            "fallover4",
+            "fallover5",
+            "fightme",
+            "fightme2",
+            "filmshocking",
+            "finger",
+            "finger2",
+            "fishdance",
+            "flex",
+            "flip",
+            "flip2",
+            "flipoff",
+            "flipoff2",
+            "flute",
+            "foldarms",
+            "foldarms2",
+            "gangsign",
+            "gangsign2",
+            "golfswing",
+            "guard",
+            "guitar",
+            "guitar2",
+            "guitar3",
+            "hammer",
+            "handshake",
+            "handshake2",
+            "handsup",
+            "hangout",
+            "headbutt",
+            "healthkit",
+            "hiking",
+            "hug",
+            "hug2",
+            "hug3",
+            "idle",
+            "idle10",
+            "idle11",
+            "idle2",
+            "idle3",
+            "idle4",
+            "idle5",
+            "idle6",
+            "idle7",
+            "idle8",
+            "idle9",
+            "idledrunk",
+            "idledrunk2",
+            "idledrunk3",
+            "impatient",
+            "inspect",
+            "janitor",
+            "jazzhands",
+            "jog",
+            "jog2",
+            "jog3",
+            "jog4",
+            "jog5",
+            "jumpingjacks",
+            "karate",
+            "karate2",
+            "keyfob",
+            "kneel",
+            "kneel2",
+            "kneel3",
+            "knock",
+            "knock2",
+            "knucklecrunch",
+            "lapdance",
+            "lapdance2",
+            "lapdance3",
+            "leafblower",
+            "lean",
+            "lean2",
+            "lean3",
+            "lean4",
+            "lean5",
+            "leanbar",
+            "leanbar2",
+            "leanbar3",
+            "leanbar4",
+            "leanflirt",
+            "leanhigh",
+            "leanhigh2",
+            "leanside",
+            "leanside2",
+            "leanside3",
+            "leanside4",
+            "leanside5",
+            "ledge",
+            "lift",
+            "lol",
+            "lol2",
+            "lookout",
+            "maid",
+            "map",
+            "me",
+            "mechanic",
+            "mechanic2",
+            "mechanic3",
+            "mechanic4",
+            "medic",
+            "medic2",
+            "meditate",
+            "meditate2",
+            "meditate3",
+            "metal",
+            "mindblown",
+            "mindblown2",
+            "mindcontrol",
+            "mindcontrol2",
+            "mugshot",
+            "musician",
+            "namaste",
+            "nervous",
+            "nervous2",
+            "nervous3",
+            "no",
+            "no2",
+            "nosepick",
+            "notepad",
+            "notepad2",
+            "noway",
+            "ok",
+            "outofbreath",
+            "parkingmeter",
+            "party",
+            "passout",
+            "passout2",
+            "passout3",
+            "passout4",
+            "passout5",
+            "peace",
+            "peace2",
+            "pee",
+            "peek",
+            "petting",
+            "phone",
+            "pickup",
+            "point",
+            "pointdown",
+            "pointright",
+            "prone",
+            "prosthigh",
+            "prostlow",
+            "puddle",
+            "pull",
+            "pullover",
+            "punching",
+            "push",
+            "push2",
+            "pushup",
+            "rabbit",
+            "radio",
+            "reaching",
+            "record",
+            "rose",
+            "salute",
+            "salute2",
+            "salute3",
+            "sandwich",
+            "scared",
+            "scared2",
+            "screwyou",
+            "shakeoff",
+            "shot",
+            "shrug",
+            "shrug2",
+            "sit",
+            "sit2",
+            "sit3",
+            "sit4",
+            "sit5",
+            "sit6",
+            "sit7",
+            "sit8",
+            "sit9",
+            "sitchair",
+            "sitchair2",
+            "sitchair3",
+            "sitchair4",
+            "sitchair5",
+            "sitchair6",
+            "sitchairside",
+            "sitdrunk",
+            "sitlean",
+            "sitsad",
+            "sitscared",
+            "sitscared2",
+            "sitscared3",
+            "situp",
+            "slap",
+            "sleep",
+            "slide",
+            "slide2",
+            "slide3",
+            "slowclap",
+            "slowclap2",
+            "slowclap3",
+            "slugger",
+            "smell",
+            "smoke",
+            "smoke2",
+            "smoke3",
+            "smoke4",
+            "soda",
+            "spiderman",
+            "statue",
+            "statue2",
+            "statue3",
+            "stickup",
+            "stink",
+            "stretch",
+            "stretch2",
+            "stretch3",
+            "stretch4",
+            "stumble",
+            "stunned",
+            "suitcase",
+            "suitcase2",
+            "sunbathe",
+            "sunbathe2",
+            "sunbathe3",
+            "sunbatheback",
+            "superhero",
+            "superhero2",
+            "surrender",
+            "t",
+            "t2",
+            "teddy",
+            "think",
+            "think2",
+            "think3",
+            "think4",
+            "think5",
+            "threaten",
+            "thumbsup",
+            "thumbsup2",
+            "thumbsup3",
+            "tryclothes",
+            "tryclothes2",
+            "tryclothes3",
+            "twerk",
+            "type",
+            "type2",
+            "type3",
+            "type4",
+            "umbrella",
+            "uncuff",
+            "wait",
+            "wait10",
+            "wait11",
+            "wait12",
+            "wait13",
+            "wait2",
+            "wait3",
+            "wait4",
+            "wait5",
+            "wait6",
+            "wait7",
+            "wait8",
+            "wait9",
+            "warmth",
+            "wave",
+            "wave2",
+            "wave3",
+            "wave4",
+            "wave5",
+            "wave6",
+            "wave7",
+            "wave8",
+            "wave9",
+            "weld",
+            "whistle",
+            "whistle2",
+            "windowshop",
+            "wine",
+            "yeah",
+            "yoga"});
+            this.emoteslist.Location = new System.Drawing.Point(985, 18);
+            this.emoteslist.Name = "emoteslist";
+            this.emoteslist.Size = new System.Drawing.Size(427, 28);
+            this.emoteslist.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(837, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 20);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "-";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(837, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 20);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "-";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(837, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(14, 20);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(857, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 20);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Shared Emotes";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(857, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 20);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Walkstyles";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(857, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 20);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Emotes";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(782, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 94);
+            this.panel1.TabIndex = 20;
             // 
             // label6
             // 
@@ -227,7 +904,7 @@ namespace CitizenFXRemapper
             this.PreviewRichtextbox.Multiline = false;
             this.PreviewRichtextbox.Name = "PreviewRichtextbox";
             this.PreviewRichtextbox.ReadOnly = true;
-            this.PreviewRichtextbox.Size = new System.Drawing.Size(668, 26);
+            this.PreviewRichtextbox.Size = new System.Drawing.Size(636, 26);
             this.PreviewRichtextbox.TabIndex = 15;
             this.PreviewRichtextbox.Text = "";
             // 
@@ -245,10 +922,95 @@ namespace CitizenFXRemapper
             this.ActionTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ActionTextbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ActionTextbox.ContextMenuStrip = this.InsertColorCodes;
             this.ActionTextbox.Location = new System.Drawing.Point(91, 54);
             this.ActionTextbox.Name = "ActionTextbox";
-            this.ActionTextbox.Size = new System.Drawing.Size(668, 26);
+            this.ActionTextbox.Size = new System.Drawing.Size(636, 26);
             this.ActionTextbox.TabIndex = 13;
+            // 
+            // InsertColorCodes
+            // 
+            this.InsertColorCodes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertColorREDToolStripMenuItem,
+            this.insertColorBLUEToolStripMenuItem,
+            this.insertColorGREENToolStripMenuItem,
+            this.insertColorYELLOWToolStripMenuItem,
+            this.insertColorPURPULEToolStripMenuItem,
+            this.insertColorORANGEToolStripMenuItem,
+            this.insertColorGREYToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.insertColorWHITEToolStripMenuItem,
+            this.insertStyleBOLDToolStripMenuItem});
+            this.InsertColorCodes.Name = "contextMenuStrip1";
+            this.InsertColorCodes.Size = new System.Drawing.Size(188, 208);
+            // 
+            // insertColorREDToolStripMenuItem
+            // 
+            this.insertColorREDToolStripMenuItem.Name = "insertColorREDToolStripMenuItem";
+            this.insertColorREDToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorREDToolStripMenuItem.Text = "Insert Color RED";
+            this.insertColorREDToolStripMenuItem.Click += new System.EventHandler(this.InsertColorREDToolStripMenuItem_Click);
+            // 
+            // insertColorBLUEToolStripMenuItem
+            // 
+            this.insertColorBLUEToolStripMenuItem.Name = "insertColorBLUEToolStripMenuItem";
+            this.insertColorBLUEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorBLUEToolStripMenuItem.Text = "Insert Color BLUE";
+            this.insertColorBLUEToolStripMenuItem.Click += new System.EventHandler(this.insertColorBLUEToolStripMenuItem_Click);
+            // 
+            // insertColorGREENToolStripMenuItem
+            // 
+            this.insertColorGREENToolStripMenuItem.Name = "insertColorGREENToolStripMenuItem";
+            this.insertColorGREENToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorGREENToolStripMenuItem.Text = "Insert Color GREEN";
+            this.insertColorGREENToolStripMenuItem.Click += new System.EventHandler(this.insertColorGREENToolStripMenuItem_Click);
+            // 
+            // insertColorYELLOWToolStripMenuItem
+            // 
+            this.insertColorYELLOWToolStripMenuItem.Name = "insertColorYELLOWToolStripMenuItem";
+            this.insertColorYELLOWToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorYELLOWToolStripMenuItem.Text = "Insert Color YELLOW";
+            this.insertColorYELLOWToolStripMenuItem.Click += new System.EventHandler(this.insertColorYELLOWToolStripMenuItem_Click);
+            // 
+            // insertColorPURPULEToolStripMenuItem
+            // 
+            this.insertColorPURPULEToolStripMenuItem.Name = "insertColorPURPULEToolStripMenuItem";
+            this.insertColorPURPULEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorPURPULEToolStripMenuItem.Text = "Insert Color PURPULE";
+            this.insertColorPURPULEToolStripMenuItem.Click += new System.EventHandler(this.insertColorPURPULEToolStripMenuItem_Click);
+            // 
+            // insertColorORANGEToolStripMenuItem
+            // 
+            this.insertColorORANGEToolStripMenuItem.Name = "insertColorORANGEToolStripMenuItem";
+            this.insertColorORANGEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorORANGEToolStripMenuItem.Text = "Insert Color ORANGE";
+            this.insertColorORANGEToolStripMenuItem.Click += new System.EventHandler(this.insertColorORANGEToolStripMenuItem_Click);
+            // 
+            // insertColorGREYToolStripMenuItem
+            // 
+            this.insertColorGREYToolStripMenuItem.Name = "insertColorGREYToolStripMenuItem";
+            this.insertColorGREYToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorGREYToolStripMenuItem.Text = "Insert Color GREY";
+            this.insertColorGREYToolStripMenuItem.Click += new System.EventHandler(this.insertColorGREYToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(184, 6);
+            // 
+            // insertColorWHITEToolStripMenuItem
+            // 
+            this.insertColorWHITEToolStripMenuItem.Name = "insertColorWHITEToolStripMenuItem";
+            this.insertColorWHITEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorWHITEToolStripMenuItem.Text = "Insert Color WHITE";
+            this.insertColorWHITEToolStripMenuItem.Click += new System.EventHandler(this.insertColorWHITEToolStripMenuItem_Click);
+            // 
+            // insertStyleBOLDToolStripMenuItem
+            // 
+            this.insertStyleBOLDToolStripMenuItem.Name = "insertStyleBOLDToolStripMenuItem";
+            this.insertStyleBOLDToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertStyleBOLDToolStripMenuItem.Text = "Insert Style BOLD";
+            this.insertStyleBOLDToolStripMenuItem.Click += new System.EventHandler(this.insertStyleBOLDToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -270,7 +1032,7 @@ namespace CitizenFXRemapper
             this.keylist.Location = new System.Drawing.Point(91, 18);
             this.keylist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.keylist.Name = "keylist";
-            this.keylist.Size = new System.Drawing.Size(668, 28);
+            this.keylist.Size = new System.Drawing.Size(636, 28);
             this.keylist.TabIndex = 11;
             // 
             // tabPage2
@@ -421,73 +1183,6 @@ namespace CitizenFXRemapper
             this.LoadedConfig.Name = "LoadedConfig";
             this.LoadedConfig.Size = new System.Drawing.Size(1333, 25);
             // 
-            // KeybindListContextmenu
-            // 
-            this.KeybindListContextmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addItemToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.addItemAboneToolStripMenuItem,
-            this.addItemBelowToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.editItemToolStripMenuItem,
-            this.removeToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.clearAllToolStripMenuItem});
-            this.KeybindListContextmenu.Name = "contextMenuStrip1";
-            this.KeybindListContextmenu.Size = new System.Drawing.Size(181, 176);
-            // 
-            // addItemToolStripMenuItem
-            // 
-            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addItemToolStripMenuItem.Text = "Add Keybind";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // addItemAboneToolStripMenuItem
-            // 
-            this.addItemAboneToolStripMenuItem.Name = "addItemAboneToolStripMenuItem";
-            this.addItemAboneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addItemAboneToolStripMenuItem.Text = "Add Keybind abowe";
-            // 
-            // addItemBelowToolStripMenuItem
-            // 
-            this.addItemBelowToolStripMenuItem.Name = "addItemBelowToolStripMenuItem";
-            this.addItemBelowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addItemBelowToolStripMenuItem.Text = "Add Keybind below";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // editItemToolStripMenuItem
-            // 
-            this.editItemToolStripMenuItem.Name = "editItemToolStripMenuItem";
-            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editItemToolStripMenuItem.Text = "Edit keybind";
-            // 
-            // removeToolStripMenuItem
-            // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.removeToolStripMenuItem.Text = "Remove Keybind";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
-            // 
-            // clearAllToolStripMenuItem
-            // 
-            this.clearAllToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
-            this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clearAllToolStripMenuItem.Text = "Remove All";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,8 +1199,10 @@ namespace CitizenFXRemapper
             this.mainPanel.PerformLayout();
             this.customTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.KeybindListContextmenu.ResumeLayout(false);
             this.KeybindBox.ResumeLayout(false);
             this.KeybindBox.PerformLayout();
+            this.InsertColorCodes.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.TopPanel.ResumeLayout(false);
             this.FormHeader.ResumeLayout(false);
@@ -514,7 +1211,6 @@ namespace CitizenFXRemapper
             ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
             this.BottomToolStrip.ResumeLayout(false);
             this.BottomToolStrip.PerformLayout();
-            this.KeybindListContextmenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -562,5 +1258,26 @@ namespace CitizenFXRemapper
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem clearAllToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox emoteslist;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox sharedemoteslist;
+        private System.Windows.Forms.ComboBox walkstylelist;
+        private System.Windows.Forms.ContextMenuStrip InsertColorCodes;
+        private System.Windows.Forms.ToolStripMenuItem insertColorREDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertColorBLUEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertColorGREENToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertColorYELLOWToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertColorPURPULEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertColorORANGEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertColorGREYToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem insertColorWHITEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertStyleBOLDToolStripMenuItem;
     }
 }
