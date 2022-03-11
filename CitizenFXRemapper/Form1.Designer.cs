@@ -125,64 +125,65 @@ namespace CitizenFXRemapper
             this.toolStripSeparator3,
             this.clearAllToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 154);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 154);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // addItemToolStripMenuItem
             // 
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.addItemToolStripMenuItem.Text = "Add item";
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemToolStripMenuItem.Text = "Add Keybind";
             this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(158, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // addItemAboneToolStripMenuItem
             // 
             this.addItemAboneToolStripMenuItem.Name = "addItemAboneToolStripMenuItem";
-            this.addItemAboneToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.addItemAboneToolStripMenuItem.Text = "Add item abowe";
+            this.addItemAboneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemAboneToolStripMenuItem.Text = "Add Keybind abowe";
             this.addItemAboneToolStripMenuItem.Click += new System.EventHandler(this.addItemAboneToolStripMenuItem_Click);
             // 
             // addItemBelowToolStripMenuItem
             // 
             this.addItemBelowToolStripMenuItem.Name = "addItemBelowToolStripMenuItem";
-            this.addItemBelowToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.addItemBelowToolStripMenuItem.Text = "Add item below";
+            this.addItemBelowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemBelowToolStripMenuItem.Text = "Add Keybind below";
             this.addItemBelowToolStripMenuItem.Click += new System.EventHandler(this.addItemBelowToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(158, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // editItemToolStripMenuItem
             // 
             this.editItemToolStripMenuItem.Name = "editItemToolStripMenuItem";
-            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.editItemToolStripMenuItem.Text = "Edit item";
+            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editItemToolStripMenuItem.Text = "Edit keybind";
             this.editItemToolStripMenuItem.Click += new System.EventHandler(this.editItemToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeToolStripMenuItem.Text = "Remove Keybind";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(158, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // clearAllToolStripMenuItem
             // 
+            this.clearAllToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
-            this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.clearAllToolStripMenuItem.Text = "Clear all";
+            this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearAllToolStripMenuItem.Text = "Remove All";
             this.clearAllToolStripMenuItem.Click += new System.EventHandler(this.clearAllToolStripMenuItem_Click);
             // 
             // button1
@@ -231,7 +232,7 @@ namespace CitizenFXRemapper
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.button2.Location = new System.Drawing.Point(1286, 4);
+            this.button2.Location = new System.Drawing.Point(1286, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 42);
             this.button2.TabIndex = 2;
