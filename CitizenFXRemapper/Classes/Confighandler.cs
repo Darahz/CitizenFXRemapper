@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -11,10 +12,40 @@ namespace CitizenFXRemapper.Classes
 {
     internal class Confighandler
     {
-        internal static void ReadConfig(string Filename, RichTextBox RichTextBox)
+        public static List<string> FullConfig = new List<string>();
+        public static List<string> Userbinds = new List<string>();
+        public static List<string> FullWithoutBinds = new List<string>();
+
+        internal static void ReadConfig(string Filename, RichTextBox RichTextBox, ListView keybindlist)
         {
             Cursor.Current = Cursors.WaitCursor;
             ColorRichtextbox(Filename, RichTextBox);
+
+            keybindlist.Items.Clear();
+
+            FullConfig = File.ReadAllLines(Filename).ToList();
+            Userbinds = FullConfig.Where(x => x.StartsWith("bind")).ToList();
+            FullWithoutBinds = FullConfig.Except(Userbinds).ToList();
+
+            for (int i = 0; i < Userbinds.Count; i++)
+            {
+                string[] raw = Userbinds[i].Split(' ');
+                string action = raw[0];
+                string inputMethod = raw[1];
+                string key = raw[2];
+                string result = string.Join(" ", raw.Skip(3));
+
+                ListViewItem lwi = new ListViewItem();
+                lwi.Text = action;
+                lwi.SubItems.Add(inputMethod);
+                lwi.SubItems.Add(key);
+                lwi.SubItems.Add(result);
+                keybindlist.Items.Add(lwi);
+
+            }
+            keybindlist.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+
             Cursor.Current = Cursors.Default;
         }
 
