@@ -96,7 +96,7 @@ namespace CitizenFXRemapper
                 
                 ActionTextbox.Text = KeybindList.SelectedItems[0].SubItems[3].Text;
             };
-
+            
         }
 
         private void CheckForColorTexts()
@@ -215,6 +215,46 @@ namespace CitizenFXRemapper
             int selection = ActionTextbox.SelectionStart;
             ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~h~");
             ActionTextbox.SelectionStart = selection + 3;
+        }
+
+        private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListViewItem lwi = new ListViewItem();
+            lwi.Text = "bind";
+            lwi.SubItems.Add("KEYBOARD");
+            lwi.SubItems.Add("0");
+            lwi.SubItems.Add(string.Empty);
+            KeybindList.Items.Add(lwi);
+            KeybindList.Items[KeybindList.Items.Count - 1].Focused = true;
+            KeybindList.Items[KeybindList.Items.Count - 1].Selected = true;
+        }
+
+        private void addItemAboneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (KeybindList.SelectedItems.Count == 0) return;
+
+            ListViewItem lwi = new ListViewItem();
+            lwi.Text = "bind";
+            lwi.SubItems.Add("KEYBOARD");
+            lwi.SubItems.Add("0");
+            lwi.SubItems.Add(string.Empty);
+
+            KeybindList.Items.Insert(KeybindList.SelectedItems[0].Index, lwi);
+            KeybindList.Items[KeybindList.SelectedItems[0].Index - 1].Focused = true;
+            KeybindList.Items[KeybindList.SelectedItems[0].Index - 1].Selected = true;
+        }
+
+        private void addItemBelowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListViewItem lwi = new ListViewItem();
+            lwi.Text = "bind";
+            lwi.SubItems.Add("KEYBOARD");
+            lwi.SubItems.Add("0");
+            lwi.SubItems.Add(string.Empty);
+
+            KeybindList.Items.Insert(KeybindList.SelectedItems[0].Index + 1, lwi);
+            KeybindList.Items[KeybindList.SelectedItems[0].Index + 1].Focused = true;
+            KeybindList.Items[KeybindList.SelectedItems[0].Index + 1].Selected = true;
         }
     }
 }
