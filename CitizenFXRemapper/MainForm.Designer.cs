@@ -32,37 +32,6 @@ namespace CitizenFXRemapper
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.KeybindListContextmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.addItemAboneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemBelowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.editItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InsertColorCodes = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.insertColorREDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertColorBLUEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertColorGREENToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertColorYELLOWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertColorPURPULEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertColorORANGEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertColorGREYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.insertColorWHITEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertStyleBOLDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.FormHeader = new System.Windows.Forms.Panel();
-            this.MinimizeButton = new System.Windows.Forms.Button();
-            this.CloseButton = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.FormTitle = new System.Windows.Forms.Label();
-            this.iconBox = new System.Windows.Forms.PictureBox();
-            this.BottomToolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.LoadedConfig = new System.Windows.Forms.ToolStripComboBox();
             this.customTabControl1 = new CitizenFXRemapper.Controls.CustomTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.KeybindList = new System.Windows.Forms.ListView();
@@ -70,8 +39,16 @@ namespace CitizenFXRemapper
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.KeybindListContextmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.addItemAboneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemBelowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KeybindBox = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.sharedemoteslist = new System.Windows.Forms.ComboBox();
             this.walkstylelist = new System.Windows.Forms.ComboBox();
             this.emoteslist = new System.Windows.Forms.ComboBox();
@@ -89,35 +66,128 @@ namespace CitizenFXRemapper
             this.PreviewRichtextbox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ActionTextbox = new System.Windows.Forms.TextBox();
+            this.InsertColorCodes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.insertColorREDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorBLUEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorGREENToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorYELLOWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorPURPULEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorORANGEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertColorGREYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.insertColorWHITEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertStyleBOLDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.keylist = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rawconfig = new System.Windows.Forms.RichTextBox();
             this.PaddingCuzFuckYou = new System.Windows.Forms.Panel();
+            this.BottomToolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.LoadedConfig = new System.Windows.Forms.ToolStripComboBox();
+            this.SidePanel = new System.Windows.Forms.Panel();
+            this.SaveConfig = new System.Windows.Forms.Button();
+            this.TopPanel = new System.Windows.Forms.Panel();
+            this.FormHeader = new System.Windows.Forms.Panel();
+            this.MinimizeButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.FormTitle = new System.Windows.Forms.Label();
+            this.iconBox = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
+            this.customTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.KeybindListContextmenu.SuspendLayout();
+            this.KeybindBox.SuspendLayout();
             this.InsertColorCodes.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.BottomToolStrip.SuspendLayout();
+            this.SidePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
             this.FormHeader.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
-            this.BottomToolStrip.SuspendLayout();
-            this.customTabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.KeybindBox.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.customTabControl1);
-            this.mainPanel.Controls.Add(this.TopPanel);
             this.mainPanel.Controls.Add(this.BottomToolStrip);
+            this.mainPanel.Controls.Add(this.SidePanel);
+            this.mainPanel.Controls.Add(this.TopPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1427, 684);
             this.mainPanel.TabIndex = 0;
+            // 
+            // customTabControl1
+            // 
+            this.customTabControl1.Controls.Add(this.tabPage1);
+            this.customTabControl1.Controls.Add(this.tabPage2);
+            this.customTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customTabControl1.ItemSize = new System.Drawing.Size(150, 30);
+            this.customTabControl1.Location = new System.Drawing.Point(0, 33);
+            this.customTabControl1.Multiline = true;
+            this.customTabControl1.Name = "customTabControl1";
+            this.customTabControl1.SelectedIndex = 0;
+            this.customTabControl1.Size = new System.Drawing.Size(1127, 626);
+            this.customTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.customTabControl1.TabIndex = 17;
+            this.customTabControl1.SelectedIndexChanged += new System.EventHandler(this.customTabControl1_SelectedIndexChanged);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
+            this.tabPage1.Controls.Add(this.KeybindList);
+            this.tabPage1.Controls.Add(this.KeybindBox);
+            this.tabPage1.Location = new System.Drawing.Point(0, 30);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1127, 596);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Keybinds";
+            // 
+            // KeybindList
+            // 
+            this.KeybindList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.KeybindList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.KeybindList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.KeybindList.ContextMenuStrip = this.KeybindListContextmenu;
+            this.KeybindList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KeybindList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.KeybindList.ForeColor = System.Drawing.Color.White;
+            this.KeybindList.FullRowSelect = true;
+            this.KeybindList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.KeybindList.HideSelection = false;
+            this.KeybindList.Location = new System.Drawing.Point(3, 3);
+            this.KeybindList.MultiSelect = false;
+            this.KeybindList.Name = "KeybindList";
+            this.KeybindList.Size = new System.Drawing.Size(1121, 467);
+            this.KeybindList.TabIndex = 1;
+            this.KeybindList.UseCompatibleStateImageBehavior = false;
+            this.KeybindList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Bindcmd";
+            this.columnHeader1.Width = 0;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Inputmethod";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Key";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Action";
             // 
             // KeybindListContextmenu
             // 
@@ -127,12 +197,11 @@ namespace CitizenFXRemapper
             this.addItemAboneToolStripMenuItem,
             this.addItemBelowToolStripMenuItem,
             this.toolStripSeparator1,
-            this.editItemToolStripMenuItem,
             this.removeToolStripMenuItem,
             this.toolStripSeparator3,
             this.clearAllToolStripMenuItem});
             this.KeybindListContextmenu.Name = "contextMenuStrip1";
-            this.KeybindListContextmenu.Size = new System.Drawing.Size(181, 176);
+            this.KeybindListContextmenu.Size = new System.Drawing.Size(181, 132);
             // 
             // addItemToolStripMenuItem
             // 
@@ -165,17 +234,12 @@ namespace CitizenFXRemapper
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
-            // editItemToolStripMenuItem
-            // 
-            this.editItemToolStripMenuItem.Name = "editItemToolStripMenuItem";
-            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editItemToolStripMenuItem.Text = "Edit keybind";
-            // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removeToolStripMenuItem.Text = "Remove Keybind";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -189,275 +253,8 @@ namespace CitizenFXRemapper
             this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clearAllToolStripMenuItem.Text = "Remove All";
             // 
-            // InsertColorCodes
-            // 
-            this.InsertColorCodes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.insertColorREDToolStripMenuItem,
-            this.insertColorBLUEToolStripMenuItem,
-            this.insertColorGREENToolStripMenuItem,
-            this.insertColorYELLOWToolStripMenuItem,
-            this.insertColorPURPULEToolStripMenuItem,
-            this.insertColorORANGEToolStripMenuItem,
-            this.insertColorGREYToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.insertColorWHITEToolStripMenuItem,
-            this.insertStyleBOLDToolStripMenuItem});
-            this.InsertColorCodes.Name = "contextMenuStrip1";
-            this.InsertColorCodes.Size = new System.Drawing.Size(188, 208);
-            // 
-            // insertColorREDToolStripMenuItem
-            // 
-            this.insertColorREDToolStripMenuItem.Name = "insertColorREDToolStripMenuItem";
-            this.insertColorREDToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorREDToolStripMenuItem.Text = "Insert Color RED";
-            this.insertColorREDToolStripMenuItem.Click += new System.EventHandler(this.InsertColorREDToolStripMenuItem_Click);
-            // 
-            // insertColorBLUEToolStripMenuItem
-            // 
-            this.insertColorBLUEToolStripMenuItem.Name = "insertColorBLUEToolStripMenuItem";
-            this.insertColorBLUEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorBLUEToolStripMenuItem.Text = "Insert Color BLUE";
-            this.insertColorBLUEToolStripMenuItem.Click += new System.EventHandler(this.insertColorBLUEToolStripMenuItem_Click);
-            // 
-            // insertColorGREENToolStripMenuItem
-            // 
-            this.insertColorGREENToolStripMenuItem.Name = "insertColorGREENToolStripMenuItem";
-            this.insertColorGREENToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorGREENToolStripMenuItem.Text = "Insert Color GREEN";
-            this.insertColorGREENToolStripMenuItem.Click += new System.EventHandler(this.insertColorGREENToolStripMenuItem_Click);
-            // 
-            // insertColorYELLOWToolStripMenuItem
-            // 
-            this.insertColorYELLOWToolStripMenuItem.Name = "insertColorYELLOWToolStripMenuItem";
-            this.insertColorYELLOWToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorYELLOWToolStripMenuItem.Text = "Insert Color YELLOW";
-            this.insertColorYELLOWToolStripMenuItem.Click += new System.EventHandler(this.insertColorYELLOWToolStripMenuItem_Click);
-            // 
-            // insertColorPURPULEToolStripMenuItem
-            // 
-            this.insertColorPURPULEToolStripMenuItem.Name = "insertColorPURPULEToolStripMenuItem";
-            this.insertColorPURPULEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorPURPULEToolStripMenuItem.Text = "Insert Color PURPULE";
-            this.insertColorPURPULEToolStripMenuItem.Click += new System.EventHandler(this.insertColorPURPULEToolStripMenuItem_Click);
-            // 
-            // insertColorORANGEToolStripMenuItem
-            // 
-            this.insertColorORANGEToolStripMenuItem.Name = "insertColorORANGEToolStripMenuItem";
-            this.insertColorORANGEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorORANGEToolStripMenuItem.Text = "Insert Color ORANGE";
-            this.insertColorORANGEToolStripMenuItem.Click += new System.EventHandler(this.insertColorORANGEToolStripMenuItem_Click);
-            // 
-            // insertColorGREYToolStripMenuItem
-            // 
-            this.insertColorGREYToolStripMenuItem.Name = "insertColorGREYToolStripMenuItem";
-            this.insertColorGREYToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorGREYToolStripMenuItem.Text = "Insert Color GREY";
-            this.insertColorGREYToolStripMenuItem.Click += new System.EventHandler(this.insertColorGREYToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(184, 6);
-            // 
-            // insertColorWHITEToolStripMenuItem
-            // 
-            this.insertColorWHITEToolStripMenuItem.Name = "insertColorWHITEToolStripMenuItem";
-            this.insertColorWHITEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertColorWHITEToolStripMenuItem.Text = "Insert Color WHITE";
-            this.insertColorWHITEToolStripMenuItem.Click += new System.EventHandler(this.insertColorWHITEToolStripMenuItem_Click);
-            // 
-            // insertStyleBOLDToolStripMenuItem
-            // 
-            this.insertStyleBOLDToolStripMenuItem.Name = "insertStyleBOLDToolStripMenuItem";
-            this.insertStyleBOLDToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.insertStyleBOLDToolStripMenuItem.Text = "Insert Style BOLD";
-            this.insertStyleBOLDToolStripMenuItem.Click += new System.EventHandler(this.insertStyleBOLDToolStripMenuItem_Click);
-            // 
-            // TopPanel
-            // 
-            this.TopPanel.Controls.Add(this.FormHeader);
-            this.TopPanel.Controls.Add(this.panel3);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1427, 33);
-            this.TopPanel.TabIndex = 14;
-            // 
-            // FormHeader
-            // 
-            this.FormHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(62)))), ((int)(((byte)(67)))));
-            this.FormHeader.Controls.Add(this.MinimizeButton);
-            this.FormHeader.Controls.Add(this.CloseButton);
-            this.FormHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FormHeader.Location = new System.Drawing.Point(287, 0);
-            this.FormHeader.Name = "FormHeader";
-            this.FormHeader.Size = new System.Drawing.Size(1140, 33);
-            this.FormHeader.TabIndex = 13;
-            // 
-            // MinimizeButton
-            // 
-            this.MinimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(81)))));
-            this.MinimizeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MinimizeButton.FlatAppearance.BorderSize = 0;
-            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeButton.ForeColor = System.Drawing.Color.White;
-            this.MinimizeButton.Location = new System.Drawing.Point(1048, 0);
-            this.MinimizeButton.Name = "MinimizeButton";
-            this.MinimizeButton.Size = new System.Drawing.Size(46, 33);
-            this.MinimizeButton.TabIndex = 1;
-            this.MinimizeButton.Text = "-";
-            this.MinimizeButton.UseVisualStyleBackColor = false;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(76)))), ((int)(((byte)(81)))));
-            this.CloseButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CloseButton.FlatAppearance.BorderSize = 0;
-            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButton.ForeColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(1094, 0);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(46, 33);
-            this.CloseButton.TabIndex = 0;
-            this.CloseButton.Text = "x";
-            this.CloseButton.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(62)))), ((int)(((byte)(67)))));
-            this.panel3.Controls.Add(this.FormTitle);
-            this.panel3.Controls.Add(this.iconBox);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(287, 33);
-            this.panel3.TabIndex = 15;
-            // 
-            // FormTitle
-            // 
-            this.FormTitle.AutoSize = true;
-            this.FormTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.FormTitle.ForeColor = System.Drawing.Color.White;
-            this.FormTitle.Location = new System.Drawing.Point(44, 9);
-            this.FormTitle.Name = "FormTitle";
-            this.FormTitle.Size = new System.Drawing.Size(153, 20);
-            this.FormTitle.TabIndex = 15;
-            this.FormTitle.Text = "CitizenFXRemapper";
-            // 
-            // iconBox
-            // 
-            this.iconBox.BackColor = System.Drawing.Color.Transparent;
-            this.iconBox.Cursor = System.Windows.Forms.Cursors.Help;
-            this.iconBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconBox.Image = ((System.Drawing.Image)(resources.GetObject("iconBox.Image")));
-            this.iconBox.Location = new System.Drawing.Point(0, 0);
-            this.iconBox.Name = "iconBox";
-            this.iconBox.Size = new System.Drawing.Size(45, 33);
-            this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconBox.TabIndex = 7;
-            this.iconBox.TabStop = false;
-            // 
-            // BottomToolStrip
-            // 
-            this.BottomToolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.BottomToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.BottomToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.LoadedConfig});
-            this.BottomToolStrip.Location = new System.Drawing.Point(0, 659);
-            this.BottomToolStrip.Name = "BottomToolStrip";
-            this.BottomToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.BottomToolStrip.Size = new System.Drawing.Size(1427, 25);
-            this.BottomToolStrip.TabIndex = 18;
-            this.BottomToolStrip.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(81, 22);
-            this.toolStripLabel1.Text = "Load Config : ";
-            // 
-            // LoadedConfig
-            // 
-            this.LoadedConfig.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.LoadedConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.LoadedConfig.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LoadedConfig.ForeColor = System.Drawing.Color.White;
-            this.LoadedConfig.Name = "LoadedConfig";
-            this.LoadedConfig.Size = new System.Drawing.Size(1333, 25);
-            // 
-            // customTabControl1
-            // 
-            this.customTabControl1.Controls.Add(this.tabPage1);
-            this.customTabControl1.Controls.Add(this.tabPage2);
-            this.customTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customTabControl1.ItemSize = new System.Drawing.Size(150, 30);
-            this.customTabControl1.Location = new System.Drawing.Point(0, 33);
-            this.customTabControl1.Multiline = true;
-            this.customTabControl1.Name = "customTabControl1";
-            this.customTabControl1.SelectedIndex = 0;
-            this.customTabControl1.Size = new System.Drawing.Size(1427, 626);
-            this.customTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.customTabControl1.TabIndex = 17;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.tabPage1.Controls.Add(this.KeybindList);
-            this.tabPage1.Controls.Add(this.KeybindBox);
-            this.tabPage1.Location = new System.Drawing.Point(0, 30);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1427, 596);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Keybinds";
-            // 
-            // KeybindList
-            // 
-            this.KeybindList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.KeybindList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.KeybindList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.KeybindList.ContextMenuStrip = this.KeybindListContextmenu;
-            this.KeybindList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KeybindList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.KeybindList.ForeColor = System.Drawing.Color.White;
-            this.KeybindList.FullRowSelect = true;
-            this.KeybindList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.KeybindList.HideSelection = false;
-            this.KeybindList.Location = new System.Drawing.Point(3, 3);
-            this.KeybindList.MultiSelect = false;
-            this.KeybindList.Name = "KeybindList";
-            this.KeybindList.Size = new System.Drawing.Size(1421, 467);
-            this.KeybindList.TabIndex = 1;
-            this.KeybindList.UseCompatibleStateImageBehavior = false;
-            this.KeybindList.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Bindcmd";
-            this.columnHeader1.Width = 0;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Inputmethod";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Key";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Action";
-            // 
             // KeybindBox
             // 
-            this.KeybindBox.Controls.Add(this.button2);
             this.KeybindBox.Controls.Add(this.sharedemoteslist);
             this.KeybindBox.Controls.Add(this.walkstylelist);
             this.KeybindBox.Controls.Add(this.emoteslist);
@@ -482,28 +279,14 @@ namespace CitizenFXRemapper
             this.KeybindBox.ForeColor = System.Drawing.Color.White;
             this.KeybindBox.Location = new System.Drawing.Point(3, 470);
             this.KeybindBox.Name = "KeybindBox";
-            this.KeybindBox.Size = new System.Drawing.Size(1421, 123);
+            this.KeybindBox.Size = new System.Drawing.Size(1121, 123);
             this.KeybindBox.TabIndex = 0;
             this.KeybindBox.TabStop = false;
             this.KeybindBox.Visible = false;
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.button2.Location = new System.Drawing.Point(733, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 33);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // sharedemoteslist
             // 
+            this.sharedemoteslist.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.sharedemoteslist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(193)))), ((int)(((byte)(194)))));
             this.sharedemoteslist.FormattingEnabled = true;
             this.sharedemoteslist.Items.AddRange(new object[] {
@@ -527,13 +310,14 @@ namespace CitizenFXRemapper
             "slap",
             "slapped",
             "slapped2"});
-            this.sharedemoteslist.Location = new System.Drawing.Point(985, 84);
+            this.sharedemoteslist.Location = new System.Drawing.Point(695, 84);
             this.sharedemoteslist.Name = "sharedemoteslist";
             this.sharedemoteslist.Size = new System.Drawing.Size(427, 28);
             this.sharedemoteslist.TabIndex = 29;
             // 
             // walkstylelist
             // 
+            this.walkstylelist.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.walkstylelist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(193)))), ((int)(((byte)(194)))));
             this.walkstylelist.FormattingEnabled = true;
             this.walkstylelist.Items.AddRange(new object[] {
@@ -606,13 +390,14 @@ namespace CitizenFXRemapper
             "Trash2",
             "Trevor",
             "Wide"});
-            this.walkstylelist.Location = new System.Drawing.Point(985, 52);
+            this.walkstylelist.Location = new System.Drawing.Point(695, 52);
             this.walkstylelist.Name = "walkstylelist";
             this.walkstylelist.Size = new System.Drawing.Size(427, 28);
             this.walkstylelist.TabIndex = 28;
             // 
             // emoteslist
             // 
+            this.emoteslist.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.emoteslist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(193)))), ((int)(((byte)(194)))));
             this.emoteslist.FormattingEnabled = true;
             this.emoteslist.Items.AddRange(new object[] {
@@ -1013,15 +798,16 @@ namespace CitizenFXRemapper
             "wine",
             "yeah",
             "yoga"});
-            this.emoteslist.Location = new System.Drawing.Point(985, 18);
+            this.emoteslist.Location = new System.Drawing.Point(695, 18);
             this.emoteslist.Name = "emoteslist";
             this.emoteslist.Size = new System.Drawing.Size(427, 28);
             this.emoteslist.TabIndex = 27;
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(837, 89);
+            this.label7.Location = new System.Drawing.Point(547, 89);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(14, 20);
             this.label7.TabIndex = 26;
@@ -1029,8 +815,9 @@ namespace CitizenFXRemapper
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(837, 57);
+            this.label8.Location = new System.Drawing.Point(547, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(14, 20);
             this.label8.TabIndex = 25;
@@ -1038,8 +825,9 @@ namespace CitizenFXRemapper
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(837, 21);
+            this.label9.Location = new System.Drawing.Point(547, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 20);
             this.label9.TabIndex = 24;
@@ -1047,8 +835,9 @@ namespace CitizenFXRemapper
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(857, 89);
+            this.label10.Location = new System.Drawing.Point(567, 89);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(120, 20);
             this.label10.TabIndex = 23;
@@ -1056,8 +845,9 @@ namespace CitizenFXRemapper
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(857, 57);
+            this.label11.Location = new System.Drawing.Point(567, 57);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 20);
             this.label11.TabIndex = 22;
@@ -1065,8 +855,9 @@ namespace CitizenFXRemapper
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(857, 21);
+            this.label12.Location = new System.Drawing.Point(567, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 20);
             this.label12.TabIndex = 21;
@@ -1074,8 +865,9 @@ namespace CitizenFXRemapper
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(833, 18);
+            this.panel1.Location = new System.Drawing.Point(543, 18);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 94);
             this.panel1.TabIndex = 20;
@@ -1118,13 +910,15 @@ namespace CitizenFXRemapper
             // 
             // PreviewRichtextbox
             // 
+            this.PreviewRichtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PreviewRichtextbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.PreviewRichtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PreviewRichtextbox.Location = new System.Drawing.Point(91, 86);
             this.PreviewRichtextbox.Multiline = false;
             this.PreviewRichtextbox.Name = "PreviewRichtextbox";
             this.PreviewRichtextbox.ReadOnly = true;
-            this.PreviewRichtextbox.Size = new System.Drawing.Size(636, 26);
+            this.PreviewRichtextbox.Size = new System.Drawing.Size(446, 26);
             this.PreviewRichtextbox.TabIndex = 15;
             this.PreviewRichtextbox.Text = "";
             // 
@@ -1145,8 +939,93 @@ namespace CitizenFXRemapper
             this.ActionTextbox.ContextMenuStrip = this.InsertColorCodes;
             this.ActionTextbox.Location = new System.Drawing.Point(91, 54);
             this.ActionTextbox.Name = "ActionTextbox";
-            this.ActionTextbox.Size = new System.Drawing.Size(636, 26);
+            this.ActionTextbox.Size = new System.Drawing.Size(446, 26);
             this.ActionTextbox.TabIndex = 13;
+            this.ActionTextbox.TextChanged += new System.EventHandler(this.ActionTextbox_TextChanged);
+            // 
+            // InsertColorCodes
+            // 
+            this.InsertColorCodes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertColorREDToolStripMenuItem,
+            this.insertColorBLUEToolStripMenuItem,
+            this.insertColorGREENToolStripMenuItem,
+            this.insertColorYELLOWToolStripMenuItem,
+            this.insertColorPURPULEToolStripMenuItem,
+            this.insertColorORANGEToolStripMenuItem,
+            this.insertColorGREYToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.insertColorWHITEToolStripMenuItem,
+            this.insertStyleBOLDToolStripMenuItem});
+            this.InsertColorCodes.Name = "contextMenuStrip1";
+            this.InsertColorCodes.Size = new System.Drawing.Size(188, 208);
+            // 
+            // insertColorREDToolStripMenuItem
+            // 
+            this.insertColorREDToolStripMenuItem.Name = "insertColorREDToolStripMenuItem";
+            this.insertColorREDToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorREDToolStripMenuItem.Text = "Insert Color RED";
+            this.insertColorREDToolStripMenuItem.Click += new System.EventHandler(this.InsertColorREDToolStripMenuItem_Click);
+            // 
+            // insertColorBLUEToolStripMenuItem
+            // 
+            this.insertColorBLUEToolStripMenuItem.Name = "insertColorBLUEToolStripMenuItem";
+            this.insertColorBLUEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorBLUEToolStripMenuItem.Text = "Insert Color BLUE";
+            this.insertColorBLUEToolStripMenuItem.Click += new System.EventHandler(this.insertColorBLUEToolStripMenuItem_Click);
+            // 
+            // insertColorGREENToolStripMenuItem
+            // 
+            this.insertColorGREENToolStripMenuItem.Name = "insertColorGREENToolStripMenuItem";
+            this.insertColorGREENToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorGREENToolStripMenuItem.Text = "Insert Color GREEN";
+            this.insertColorGREENToolStripMenuItem.Click += new System.EventHandler(this.insertColorGREENToolStripMenuItem_Click);
+            // 
+            // insertColorYELLOWToolStripMenuItem
+            // 
+            this.insertColorYELLOWToolStripMenuItem.Name = "insertColorYELLOWToolStripMenuItem";
+            this.insertColorYELLOWToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorYELLOWToolStripMenuItem.Text = "Insert Color YELLOW";
+            this.insertColorYELLOWToolStripMenuItem.Click += new System.EventHandler(this.insertColorYELLOWToolStripMenuItem_Click);
+            // 
+            // insertColorPURPULEToolStripMenuItem
+            // 
+            this.insertColorPURPULEToolStripMenuItem.Name = "insertColorPURPULEToolStripMenuItem";
+            this.insertColorPURPULEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorPURPULEToolStripMenuItem.Text = "Insert Color PURPULE";
+            this.insertColorPURPULEToolStripMenuItem.Click += new System.EventHandler(this.insertColorPURPULEToolStripMenuItem_Click);
+            // 
+            // insertColorORANGEToolStripMenuItem
+            // 
+            this.insertColorORANGEToolStripMenuItem.Name = "insertColorORANGEToolStripMenuItem";
+            this.insertColorORANGEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorORANGEToolStripMenuItem.Text = "Insert Color ORANGE";
+            this.insertColorORANGEToolStripMenuItem.Click += new System.EventHandler(this.insertColorORANGEToolStripMenuItem_Click);
+            // 
+            // insertColorGREYToolStripMenuItem
+            // 
+            this.insertColorGREYToolStripMenuItem.Name = "insertColorGREYToolStripMenuItem";
+            this.insertColorGREYToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorGREYToolStripMenuItem.Text = "Insert Color GREY";
+            this.insertColorGREYToolStripMenuItem.Click += new System.EventHandler(this.insertColorGREYToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(184, 6);
+            // 
+            // insertColorWHITEToolStripMenuItem
+            // 
+            this.insertColorWHITEToolStripMenuItem.Name = "insertColorWHITEToolStripMenuItem";
+            this.insertColorWHITEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertColorWHITEToolStripMenuItem.Text = "Insert Color WHITE";
+            this.insertColorWHITEToolStripMenuItem.Click += new System.EventHandler(this.insertColorWHITEToolStripMenuItem_Click);
+            // 
+            // insertStyleBOLDToolStripMenuItem
+            // 
+            this.insertStyleBOLDToolStripMenuItem.Name = "insertStyleBOLDToolStripMenuItem";
+            this.insertStyleBOLDToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.insertStyleBOLDToolStripMenuItem.Text = "Insert Style BOLD";
+            this.insertStyleBOLDToolStripMenuItem.Click += new System.EventHandler(this.insertStyleBOLDToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -1168,33 +1047,33 @@ namespace CitizenFXRemapper
             this.keylist.Location = new System.Drawing.Point(91, 18);
             this.keylist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.keylist.Name = "keylist";
-            this.keylist.Size = new System.Drawing.Size(636, 28);
+            this.keylist.Size = new System.Drawing.Size(446, 28);
             this.keylist.TabIndex = 11;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.rawconfig);
             this.tabPage2.Controls.Add(this.PaddingCuzFuckYou);
             this.tabPage2.Location = new System.Drawing.Point(0, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1427, 596);
+            this.tabPage2.Size = new System.Drawing.Size(1127, 596);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Raw Config";
             // 
-            // richTextBox1
+            // rawconfig
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(30, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1394, 590);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rawconfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
+            this.rawconfig.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rawconfig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rawconfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rawconfig.ForeColor = System.Drawing.Color.White;
+            this.rawconfig.Location = new System.Drawing.Point(30, 3);
+            this.rawconfig.Name = "rawconfig";
+            this.rawconfig.Size = new System.Drawing.Size(1094, 590);
+            this.rawconfig.TabIndex = 0;
+            this.rawconfig.Text = "";
             // 
             // PaddingCuzFuckYou
             // 
@@ -1203,6 +1082,146 @@ namespace CitizenFXRemapper
             this.PaddingCuzFuckYou.Name = "PaddingCuzFuckYou";
             this.PaddingCuzFuckYou.Size = new System.Drawing.Size(27, 590);
             this.PaddingCuzFuckYou.TabIndex = 1;
+            // 
+            // BottomToolStrip
+            // 
+            this.BottomToolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
+            this.BottomToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.BottomToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.LoadedConfig});
+            this.BottomToolStrip.Location = new System.Drawing.Point(0, 659);
+            this.BottomToolStrip.Name = "BottomToolStrip";
+            this.BottomToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.BottomToolStrip.Size = new System.Drawing.Size(1127, 25);
+            this.BottomToolStrip.TabIndex = 18;
+            this.BottomToolStrip.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(81, 22);
+            this.toolStripLabel1.Text = "Load Config : ";
+            // 
+            // LoadedConfig
+            // 
+            this.LoadedConfig.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.LoadedConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
+            this.LoadedConfig.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LoadedConfig.ForeColor = System.Drawing.Color.White;
+            this.LoadedConfig.Name = "LoadedConfig";
+            this.LoadedConfig.Size = new System.Drawing.Size(1000, 25);
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.Controls.Add(this.SaveConfig);
+            this.SidePanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.SidePanel.Location = new System.Drawing.Point(1127, 33);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(300, 651);
+            this.SidePanel.TabIndex = 19;
+            // 
+            // SaveConfig
+            // 
+            this.SaveConfig.BackColor = System.Drawing.Color.Transparent;
+            this.SaveConfig.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SaveConfig.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SaveConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveConfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.SaveConfig.Location = new System.Drawing.Point(0, 609);
+            this.SaveConfig.Name = "SaveConfig";
+            this.SaveConfig.Size = new System.Drawing.Size(300, 42);
+            this.SaveConfig.TabIndex = 3;
+            this.SaveConfig.Text = "Save Keybinds";
+            this.SaveConfig.UseVisualStyleBackColor = false;
+            this.SaveConfig.Click += new System.EventHandler(this.SaveConfig_Click);
+            // 
+            // TopPanel
+            // 
+            this.TopPanel.Controls.Add(this.FormHeader);
+            this.TopPanel.Controls.Add(this.panel3);
+            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.Size = new System.Drawing.Size(1427, 33);
+            this.TopPanel.TabIndex = 14;
+            // 
+            // FormHeader
+            // 
+            this.FormHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(62)))), ((int)(((byte)(67)))));
+            this.FormHeader.Controls.Add(this.MinimizeButton);
+            this.FormHeader.Controls.Add(this.CloseButton);
+            this.FormHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FormHeader.Location = new System.Drawing.Point(287, 0);
+            this.FormHeader.Name = "FormHeader";
+            this.FormHeader.Size = new System.Drawing.Size(1140, 33);
+            this.FormHeader.TabIndex = 13;
+            // 
+            // MinimizeButton
+            // 
+            this.MinimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(81)))));
+            this.MinimizeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimizeButton.FlatAppearance.BorderSize = 0;
+            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeButton.ForeColor = System.Drawing.Color.White;
+            this.MinimizeButton.Location = new System.Drawing.Point(1048, 0);
+            this.MinimizeButton.Name = "MinimizeButton";
+            this.MinimizeButton.Size = new System.Drawing.Size(46, 33);
+            this.MinimizeButton.TabIndex = 1;
+            this.MinimizeButton.Text = "-";
+            this.MinimizeButton.UseVisualStyleBackColor = false;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(76)))), ((int)(((byte)(81)))));
+            this.CloseButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.ForeColor = System.Drawing.Color.White;
+            this.CloseButton.Location = new System.Drawing.Point(1094, 0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(46, 33);
+            this.CloseButton.TabIndex = 0;
+            this.CloseButton.Text = "x";
+            this.CloseButton.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(62)))), ((int)(((byte)(67)))));
+            this.panel3.Controls.Add(this.FormTitle);
+            this.panel3.Controls.Add(this.iconBox);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(287, 33);
+            this.panel3.TabIndex = 15;
+            // 
+            // FormTitle
+            // 
+            this.FormTitle.AutoSize = true;
+            this.FormTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.FormTitle.ForeColor = System.Drawing.Color.White;
+            this.FormTitle.Location = new System.Drawing.Point(44, 9);
+            this.FormTitle.Name = "FormTitle";
+            this.FormTitle.Size = new System.Drawing.Size(153, 20);
+            this.FormTitle.TabIndex = 15;
+            this.FormTitle.Text = "CitizenFXRemapper";
+            // 
+            // iconBox
+            // 
+            this.iconBox.BackColor = System.Drawing.Color.Transparent;
+            this.iconBox.Cursor = System.Windows.Forms.Cursors.Help;
+            this.iconBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconBox.Image = ((System.Drawing.Image)(resources.GetObject("iconBox.Image")));
+            this.iconBox.Location = new System.Drawing.Point(0, 0);
+            this.iconBox.Name = "iconBox";
+            this.iconBox.Size = new System.Drawing.Size(45, 33);
+            this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconBox.TabIndex = 7;
+            this.iconBox.TabStop = false;
             // 
             // MainForm
             // 
@@ -1218,20 +1237,21 @@ namespace CitizenFXRemapper
             this.Text = "MainForm";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.customTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.KeybindListContextmenu.ResumeLayout(false);
+            this.KeybindBox.ResumeLayout(false);
+            this.KeybindBox.PerformLayout();
             this.InsertColorCodes.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.BottomToolStrip.ResumeLayout(false);
+            this.BottomToolStrip.PerformLayout();
+            this.SidePanel.ResumeLayout(false);
             this.TopPanel.ResumeLayout(false);
             this.FormHeader.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
-            this.BottomToolStrip.ResumeLayout(false);
-            this.BottomToolStrip.PerformLayout();
-            this.customTabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.KeybindBox.ResumeLayout(false);
-            this.KeybindBox.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1249,7 +1269,7 @@ namespace CitizenFXRemapper
         private Controls.CustomTabControl customTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rawconfig;
         private System.Windows.Forms.Panel PaddingCuzFuckYou;
         private System.Windows.Forms.ToolStrip BottomToolStrip;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
@@ -1275,7 +1295,6 @@ namespace CitizenFXRemapper
         private System.Windows.Forms.ToolStripMenuItem addItemAboneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addItemBelowToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem editItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem clearAllToolStripMenuItem;
@@ -1300,6 +1319,7 @@ namespace CitizenFXRemapper
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem insertColorWHITEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insertStyleBOLDToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel SidePanel;
+        private System.Windows.Forms.Button SaveConfig;
     }
 }
