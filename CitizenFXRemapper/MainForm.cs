@@ -163,68 +163,31 @@ namespace CitizenFXRemapper
 
         }
 
-        private void InsertColorREDToolStripMenuItem_Click(object sender, EventArgs e)
+        private void InsertColorREDToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~r~");
+
+        private void insertColorBLUEToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~b~");
+
+        private void insertColorGREENToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~g~");
+
+        private void insertColorYELLOWToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~y~");
+
+        private void insertColorPURPULEToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~p~");
+
+        private void insertColorORANGEToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~o~");
+
+        private void insertColorGREYToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~c~");
+
+        private void insertColorWHITEToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~e~");
+
+        private void insertStyleBOLDToolStripMenuItem_Click(object sender, EventArgs e) => InsertString("~H~");
+
+        private void InsertString(string insert)
         {
             int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~r~");
+            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, insert);
             ActionTextbox.SelectionStart = selection + 3;
         }
 
-        private void insertColorBLUEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~b~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertColorGREENToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~g~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertColorYELLOWToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~y~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertColorPURPULEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~p~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertColorORANGEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~o~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertColorGREYToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~c~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertColorWHITEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~w~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
-
-        private void insertStyleBOLDToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int selection = ActionTextbox.SelectionStart;
-            ActionTextbox.Text = ActionTextbox.Text.Insert(selection, "~h~");
-            ActionTextbox.SelectionStart = selection + 3;
-        }
 
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -317,7 +280,7 @@ namespace CitizenFXRemapper
 
             if (tmpsha != cursha)
             {
-                string backupName = $"{MainBackupDirectory}\\{DateTime.Now.ToString("MM-dd-yyyy")}-Backup.cfg";
+                string backupName = $"{MainBackupDirectory}\\{DateTime.Now.ToString("MM-dd-yyyy hh.mm")}-Backup.cfg";
                 File.Copy(CFGFileLocation, backupName);
                 File.WriteAllLines(CFGFileLocation, configToSave);
                 MessageBox.Show("Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -335,5 +298,54 @@ namespace CitizenFXRemapper
             if (KeybindList.SelectedItems.Count == 0) return;
             KeybindList.SelectedItems[0].SubItems[3].Text = ActionTextbox.Text;
         }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Cfg files (.cfg)|*.cfg";
+                sfd.InitialDirectory = MainBackupDirectory;
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    List<string> configToSave = new List<string>
+                    {
+                        "// generated by CitizenFX",
+                        "unbindall"
+                    };
+
+                    for (int i = 0; i < KeybindList.Items.Count; i++)
+                    {
+                        StringBuilder config = new StringBuilder();
+                        for (int j = 0; j < KeybindList.Items[i].SubItems.Count; j++)
+                        {
+                            config.Append($"{KeybindList.Items[i].SubItems[j].Text} ");
+                        }
+                        configToSave.Add(config.ToString().TrimEnd());
+                    }
+                    configWithoutBindings.ForEach(x => {
+                        configToSave.Add(x);
+                    });
+                    string rndname = $"C:\\temp\\{Path.GetRandomFileName()}";
+                    File.WriteAllLines(rndname, configToSave);
+                    string tmpsha = Filehelper.GetSha256(rndname);
+                    string cursha = Filehelper.GetSha256(CFGFileLocation);
+                    File.Delete(rndname);
+
+                    if (tmpsha != cursha)
+                    {
+                        string backupName = $"{MainBackupDirectory}\\{DateTime.Now.ToString("MM-dd-yyyy")}-Backup.cfg";
+                        File.Copy(CFGFileLocation, backupName,true);
+                        File.WriteAllLines(sfd.FileName, configToSave);
+                        MessageBox.Show("Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadedConfig.Items.Add($"{MainBackupLocaton}\\{DateTime.Now.ToShortTimeString()}-Backup.cfg");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No changes made. Old config kept", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+
     }
 }

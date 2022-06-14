@@ -94,6 +94,8 @@ namespace CitizenFXRemapper
             this.panel3 = new System.Windows.Forms.Panel();
             this.FormTitle = new System.Windows.Forms.Label();
             this.iconBox = new System.Windows.Forms.PictureBox();
+            this.saveOptionsContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel.SuspendLayout();
             this.customTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,6 +109,7 @@ namespace CitizenFXRemapper
             this.FormHeader.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
+            this.saveOptionsContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -1126,6 +1129,7 @@ namespace CitizenFXRemapper
             // SaveConfig
             // 
             this.SaveConfig.BackColor = System.Drawing.Color.Transparent;
+            this.SaveConfig.ContextMenuStrip = this.saveOptionsContextMenu;
             this.SaveConfig.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.SaveConfig.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SaveConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1223,6 +1227,20 @@ namespace CitizenFXRemapper
             this.iconBox.TabIndex = 7;
             this.iconBox.TabStop = false;
             // 
+            // saveOptionsContextMenu
+            // 
+            this.saveOptionsContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveAsToolStripMenuItem});
+            this.saveOptionsContextMenu.Name = "saveOptionsContextMenu";
+            this.saveOptionsContextMenu.Size = new System.Drawing.Size(115, 26);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.saveAsToolStripMenuItem.Text = "Save As";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1252,6 +1270,7 @@ namespace CitizenFXRemapper
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
+            this.saveOptionsContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1321,5 +1340,7 @@ namespace CitizenFXRemapper
         private System.Windows.Forms.ToolStripMenuItem insertStyleBOLDToolStripMenuItem;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button SaveConfig;
+        private System.Windows.Forms.ContextMenuStrip saveOptionsContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
     }
 }
